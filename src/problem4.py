@@ -3,8 +3,8 @@ Exam 1, problem 4.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Zhen Yang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -44,6 +44,23 @@ def run_test_problem4():
 
 
 def problem4(number_of_stairs, step_size, starting_point, window):
+    starting_point.attach_to(window)
+    for k in range(number_of_stairs):
+        line1 = rg.Line(rg.Point(starting_point.x + k * step_size, starting_point.y - (k+1) * step_size), rg.Point(starting_point.x + (k + 1) * step_size, starting_point.y - (k + 1) * step_size))
+        line1.thickness = 3
+        line1.color = 'black'
+        line1.attach_to(window)
+    point1 = rg.Point(starting_point.x + (number_of_stairs) * step_size, starting_point.y - (number_of_stairs) * step_size)
+    point1.attach_to(window)
+
+    for k in range(number_of_stairs):
+        line2 = rg.Line(rg.Point(starting_point.x + (k) * step_size, starting_point.y - k * step_size), rg.Point(starting_point.x + (k) * step_size, starting_point.y - (k+1) * step_size))
+        line2.thickness = 3
+        line2.color = 'magenta'
+        line2.attach_to(window)
+    window.render()
+
+
     """
     See   problem4_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
