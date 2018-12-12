@@ -14,15 +14,34 @@ def main():
 
 def test_factor_sum():
 
-    expected = 11
-    actual = factor_sum(28)
-    print()
-    print('Expected:', expected)
-    print('Actual:', actual)
+    expected = 7
+    actual = factor_sum(4)
+    print('Test 1 Expected:', expected)
+    print('         Actual:', actual)
+
+    expected = 6
+    actual = factor_sum(14)
+    print('Test 2 Expected:', expected)
+    print('         Actual:', actual)
+
+    expected = 6
+    actual = factor_sum(15)
+    print('Test 3 Expected:', expected)
+    print('         Actual:', actual)
+
+    expected = 9
+    actual = factor_sum(17)
+    print('Test 4 Expected:', expected)
+    print('         Actual:', actual)
+
+    expected = 6
+    actual = factor_sum(24)
+    print('Test 5 Expected:', expected)
+    print('         Actual:', actual)
 
     """ Tests the   factor_sum   function. """
     ###########################################################################
-    #  TODO: 2. Implement this TEST function, as follows:
+    #  DONE: 2. Implement this TEST function, as follows:
     #
     #    1. Read the  doc-string of the   factor_sum   function defined below.
     #
